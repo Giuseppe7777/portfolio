@@ -1,0 +1,26 @@
+
+{
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/weekly_planer/css"  // Шлях для збереження CSS
+    }
+  ],
+  "liveSassCompile.settings.includeItems": [
+    "/weekly_planer/#source/scss/style.scss" // Шлях до SCSS файлів
+  ],
+  "files.autoSave": "afterDelay",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "editor.formatOnSave": true,
+  "terminal.integrated.defaultProfile.windows": "Command Prompt",
+  "workbench.settings.applyToAllProfiles": [],
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "liveSassCompile.settings.useNewCompiler": true,  // увімкнено новий компілятор
+  "liveSassCompile.settings.autoprefix": "defaults"  // увімкнено автопрефіксування
+}
