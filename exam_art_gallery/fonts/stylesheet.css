@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Stratford-Serial';
+    src: url('Stratford-Serial-Regular.eot');
+    src: url('Stratford-Serial-Regular.eot?#iefix') format('embedded-opentype'),
+        url('Stratford-Serial-Regular.woff2') format('woff2'),
+        url('Stratford-Serial-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
