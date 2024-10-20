@@ -265,7 +265,8 @@ html, body {
 } 
 
 .hero img {
-    height: 800px;
+    height: 1200px;
+    margin-bottom: -200px;
 }
 
 /* SITEMAIN

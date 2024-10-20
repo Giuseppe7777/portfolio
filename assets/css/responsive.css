@@ -12,11 +12,12 @@
 	/* HERO
 	================================================== */
 	.hero {
-		min-height: 600px;
+		min-height: 800px;
 	}
 
 	.hero img {
-		height: 500px;
+		height: 900px;
+		margin-bottom: 0;
 	}
 
 	/* SITEMAIN
@@ -65,7 +66,7 @@
 	}
 
 	.hero img {
-		height: 420px;
+		height: 850px;
 	}
 
 	/* SITEMAIN
@@ -308,7 +309,7 @@
 	}
 
 	.hero img {
-		height: 360px
+		height: 750px
 	}
 
 	/* SITEMAIN
@@ -413,6 +414,13 @@
 		margin-top: 10px;
 	}
 
+	.hero img {
+		height: 750px;
+		margin-right: -50px;
+		margin-bottom: -70px;
+		
+	}
+
 	/* SITEMAIN
 	================================================== */
 	.site-main {
@@ -435,7 +443,7 @@
 
 	.portfolio-item,
 	.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-		margin-bottom: 0px; 
+		margin-bottom: 10px; 
 	}
 
 	.section-portfolio .btn {
