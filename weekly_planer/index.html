@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weekly Planner</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Hepta+Slab:wght@1..900&family=Unna:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    rel="stylesheet"
+    />
+    <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+    crossorigin="anonymous"
+    />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-top">
+                <nav class="navbar navbar-expand-lg bg-body-tertiary py-3" data-bs-theme="dark">
+                    <div class="container">
+                        <a class="navbar-brand" href="#">My Planner</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="#">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="tasksLink" href="#">Tasks</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">Settings</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="deletedLink" href="#">Deleted</a>
+                                </li>
+                            </ul>                            
+                            <div>
+                                <a href="#" class="btn p-1">
+                                    <i class="fa-solid fa-bell me-2"></i>
+                                    <span class="badge cart-badge bg-danger rounded-circle">1</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="header-inner">
+                <div class="header-inner__banner">Weekly Planner</div>
+            </div>
+        </header>
+
+        <section class="cardsblock" id="taskSection">
+            <div class="container-fluid">
+                <div class="cardsblock__heading">
+                    <p class="cardsblock__heading-name">Weekly Tasks</p>
+                    <div class="cardsblock__heading-sortblock">
+                        <p class="cardsblock__heading-sortname">Sort by priority</p>
+                        <button class="cardsblock__heading-icon" id="sortBtn">
+                            <i class="fa-solid fa-arrow-up-wide-short"></i>
+                        </button>                        
+                    </div>
+                </div>
+                <div class="cardsblock__items row row-cols-1 row-cols-md-2 row-cols-lg-3 p-5 mx-auto" id="cards">    
+                </div>
+            </div>
+        </section>
+
+        <section class="deletedTasksSection" id="deletedSection" style="display: none;">
+            <div class="container">
+                <h3 class="style-deleted">Deleted Tasks</h3>
+                <div id="deletedCards" class="row row-cols-1 row-cols-md-2 row-cols-lg-3 p-5 mx-auto">
+                    <!-- Deleted tasks will be displayed here -->
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer bg-dark py-3">
+            <div class="container">
+                <div class="footer__icons text-center mb-3">
+                    <div class="footer__icons-inner d-flex justify-content-center gap-4">
+                        <a href="#" class="text-white"><i class="footer-icon fa-brands fa-facebook fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="footer-icon fa-brands fa-twitter fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="footer-icon fa-brands fa-google fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="footer-icon fa-brands fa-instagram fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="footer-icon fa-brands fa-linkedin fa-lg"></i></a>
+                        <a href="#" class="text-white"><i class="footer-icon fa-brands fa-github fa-lg"></i></a>
+                    </div>
+                </div>
+                <div class="footer__subscribe">
+                    <form class="d-flex justify-content-center align-items-center">
+                        <label for="newsletter" class="text-white me-4">Sign up for our newsletter</label>
+                        <input type="email" id="newsletter" class="form-control me-4" placeholder="Enter your email" style="width: 250px;" required>
+                        <button type="submit" class="btn btn-outline-light">Subscribe</button>
+                    </form>
+                </div>
+                <p class="copyright text-white">© 2024 Copyright Yosyp Malanka</p>
+            </div>
+        </footer>
+        
+    </div>
+
+    <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"
+    ></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
