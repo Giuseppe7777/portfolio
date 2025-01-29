@@ -87,3 +87,67 @@ $(function() {
     });
     
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.getElementById("contact-form");
+    const messageContainer = document.createElement("div"); 
+
+    messageContainer.style.position = "absolute";
+    messageContainer.style.bottom = "50%"; 
+    messageContainer.style.left = "50%";
+    messageContainer.style.transform = "translateX(-50%)"; 
+    messageContainer.style.marginBottom = "10px"; 
+    messageContainer.style.fontSize = "18px"; 
+    messageContainer.style.opacity = "0"; 
+    messageContainer.style.transition = "opacity 0.5s ease"; 
+    messageContainer.style.padding = "5px 35px"; 
+    messageContainer.style.border = "1px solid green"; 
+    messageContainer.style.backgroundColor = "green"; 
+
+    form.style.position = "relative"; 
+    form.appendChild(messageContainer);
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        fetch("contact.php", {
+            method: "POST",
+            body: formData,
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.status === "success") {
+                    messageContainer.textContent = data.message;
+                    messageContainer.style.color = "white";
+                    messageContainer.style.opacity = "1"; // Показуємо повідомлення
+                    form.reset();
+
+                    setTimeout(() => {
+                        messageContainer.style.opacity = "0"; // Ховаємо повідомлення
+                    }, 5000);
+                } else {
+                    messageContainer.textContent = data.message;
+                    messageContainer.style.color = "red";
+                    messageContainer.style.opacity = "1"; // Показуємо повідомлення
+
+                    setTimeout(() => {
+                        messageContainer.style.opacity = "0"; // Ховаємо повідомлення
+                    }, 5000);
+                }
+            })
+            .catch(error => {
+                messageContainer.textContent =
+                    "An error occurred. Please try again later.";
+                messageContainer.style.color = "red";
+                messageContainer.style.opacity = "1"; // Показуємо повідомлення
+
+                setTimeout(() => {
+                    messageContainer.style.opacity = "0"; // Ховаємо повідомлення
+                }, 5000);
+
+                console.error("Error:", error);
+            });
+    });
+});
