@@ -100,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
     messageContainer.style.fontSize = "18px"; 
     messageContainer.style.opacity = "0"; 
     messageContainer.style.transition = "opacity 0.5s ease"; 
-    messageContainer.style.padding = "5px 35px"; 
+    messageContainer.style.padding = "5px 25px"; 
     messageContainer.style.border = "1px solid green"; 
     messageContainer.style.backgroundColor = "green"; 
 
