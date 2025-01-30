@@ -449,6 +449,12 @@
 		margin-top: 25px;
 	}
 
+	/* Section-counters */
+
+	#message-container {
+		font-size: 13px;
+	}
+
 	/* FOOTER
 	================================================== */
 	.site-footer .row {

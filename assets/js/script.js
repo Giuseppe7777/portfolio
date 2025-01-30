@@ -92,12 +92,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const form = document.getElementById("contact-form");
     const messageContainer = document.createElement("div"); 
 
+    messageContainer.id = "message-container";
     messageContainer.style.position = "absolute";
     messageContainer.style.bottom = "50%"; 
     messageContainer.style.left = "50%";
     messageContainer.style.transform = "translateX(-50%)"; 
     messageContainer.style.marginBottom = "10px"; 
-    messageContainer.style.fontSize = "18px"; 
     messageContainer.style.opacity = "0"; 
     messageContainer.style.transition = "opacity 0.5s ease"; 
     messageContainer.style.padding = "5px 25px"; 
