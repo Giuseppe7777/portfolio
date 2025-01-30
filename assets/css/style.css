@@ -25,34 +25,25 @@ url('../fonts/fontello.svg?71582828#fontello') format('svg');
     width: 1em;
     margin-right: .2em;
     text-align: center;
-    /* opacity: .8; */
 
-    /* For safety - reset parent styles, that can break glyph codes*/
     font-variant: normal;
     text-transform: none;
 
-    /* fix buttons height, for twitter bootstrap */
     line-height: 1em;
 
-    /* Animation center compensation - margins should be symmetric */
-    /* remove if not needed */
     margin-left: .2em;
 
-    /* you can be more comfortable with increased icons size */
-    /* font-size: 120%; */
+    font-size: 120%;
 
-    /* Font smoothing. That was taken from TWBS */
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    /* Uncomment for 3D effect */
-    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+    text-shadow: 1.5px 1px 1px #dd4b39;
 }
 
 .icon-twitter:before { content: '\e800'; } /* '' */
 .icon-facebook:before { content: '\f09a'; } /* '' */
 .icon-github-circled:before { content: '\f09b'; } /* '' */
-.icon-gplus:before { content: '\f0d5'; } /* '' */
 .icon-linkedin:before { content: '\f0e1'; } /* '' */
 .icon-up:before { content: '\f176'; } /* '' */
 
@@ -181,8 +172,8 @@ html, body {
     z-index: 5;
 }
 
-.site-logo img {
-    padding-bottom: 2px;
+.main-menu {
+    margin-top: 8px;
 }
 
 /* Navigation */
@@ -225,30 +216,23 @@ html, body {
     background: url(../img/hero.jpg) no-repeat center / cover; 
     height: 100%;
     width: 100%;
-    min-height: 700px;
+    min-height: 800px;
+    padding-top: 150px;
+}
+
+/* ================================================================== */
+
+.hero-row-items {
+    display: flex;
+    justify-content: space-evenly;
 }
 
 .hero .container {
     position: relative;
     height: 100%;
-}
-
-.hero .col-md-6:first-child {
-    position: absolute;
-    top: 35%;
-    left: 0;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    z-index: 2;
-}
-
-.hero .col-md-6:last-child {
-    position: absolute;
-    right: 0;
-    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero h1 {
@@ -265,8 +249,10 @@ html, body {
 } 
 
 .hero img {
-    height: 900px;
+    height: 650px;
 }
+
+/* ========================================================= */
 
 /* SITEMAIN
 ================================================== */
@@ -370,121 +356,37 @@ html, body {
 }
 
 /* Section: Portfolio */
-/* .section-portfolio {
-    padding-bottom: 120px;
-}
-
-.portfolio-item {
-    height: 280px;
-    margin-bottom: 30px;
-    position: relative;
-}
-
-.section-portfolio .col-md-4:nth-last-child(-n+3) .portfolio-item {
-    margin-bottom: 0;
-}
-
-.portfolio-item:before {
-    content: '';
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    transition: background-color 0.25s ease-in-out;
-    -moz-transition: background-color 0.25s ease-in-out;
-    -webkit-transition: background-color 0.25s ease-in-out;
-    -o-transition: background-color 0.25s ease-in-out;
-    -ms-transition: background-color 0.25s ease-in-out;
-}
-
-.portfolio-item:hover:before{
-    background-color: rgba(33,33,33,0.6);
-}
-
-.portfolio-item-info {
-    position: absolute;
-    top: 150px;
-    left: 0px;
-    z-index: 999;
-    opacity: 0;
-    transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -moz-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -webkit-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -o-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-    -ms-transition: opacity 0.25s ease-in-out, left 0.25s ease-in-out;
-}
-
-.portfolio-item:hover .portfolio-item-info {
-    left: 50px;
-    opacity: 1;
-}
-
-.portfolio-item-info h4 {
-    margin: 0 0 20px;
-    font-weight: 700;
-    color: #fff;
-}
-
-.portfolio-item-info a {
-    padding: 6px 7px 4px;
-    font-size: 12px;
-    border: 1px solid #fff;
-    border-radius: 50px;
-    color: #fff;
-    transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -moz-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -webkit-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -o-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-    -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
-}
-
-.portfolio-item-info a:hover {
-    color: #212121;
-    background-color: #fff;
-}
-
-.section-portfolio .btn {
-    margin-top: 10px;
-} */
-
-/* Section: Portfolio */
 .section-portfolio {
     padding-bottom: 120px;
 }
 
 .portfolio-item {
     height: 280px;
-    margin-bottom: 30px; /* Загальний відступ між елементами */
+    margin-bottom: 30px; 
     position: relative;
 }
 
-/* Для екранів від 768px і більше (3 елементи в ряд) */
 @media (min-width: 992px) {
     .section-portfolio .row > .col-md-4:nth-child(3n+1) {
-        clear: left; /* Початок нового ряду */
+        clear: left; 
     }
 }
 
-/* Для екранів 768px - 991px (2 елементи в ряд) */
 @media (min-width: 768px) and (max-width: 991px) {
     .section-portfolio .row > .col-md-4:nth-child(2n+1) {
-        clear: left; /* Початок нового ряду */
+        clear: left; 
     }
 }
 
-/* Для екранів до 767px (2 елементи в ряд) */
 @media (max-width: 767px) {
     .section-portfolio .row > .col-xs-6:nth-child(2n+1) {
-        clear: left; /* Початок нового ряду */
+        clear: left; 
     }
 }
 
-/* Виправлення для останнього елемента (забезпечення правильного відступу) */
 .section-portfolio .row > .col-md-4:last-child .portfolio-item,
 .section-portfolio .row > .col-xs-6:last-child .portfolio-item {
-    margin-bottom: 0; /* Видалення відступу для останнього елемента */
+    margin-bottom: 0; 
 }
 
 .portfolio-item:before {
@@ -668,12 +570,11 @@ html, body {
     -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
 
-a.twitter-bg:hover {color: #55acee;}
-a.facebook-bg:hover{color: #3b5998;}
-a.gplus-bg:hover{color: #007bb5;} 
+a.twitter-bg:hover {color:#dd4b39;}
+a.facebook-bg:hover{color: #dd4b39;}
 a.linkedin-bg:hover {color: #dd4b39;}
-a.icon-github-circled {color: #212121;}
-a.icon-up-bg:hover {color: #212121;}
+a.icon-github-circled {color: #dd4b39;}
+a.icon-up-bg:hover {color: #dd4b39;}
 
 .copyright {
     margin-bottom: 0;
