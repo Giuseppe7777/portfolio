@@ -38,7 +38,7 @@ url('../fonts/fontello.svg?71582828#fontello') format('svg');
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    text-shadow: 1.5px 1px 1px #dd4b39;
+    text-shadow: 1.5px 1px 1px #5de4fc;
 }
 
 .icon-twitter:before { content: '\e800'; } /* '' */
@@ -570,11 +570,11 @@ html, body {
     -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
 
-a.twitter-bg:hover {color:#dd4b39;}
-a.facebook-bg:hover{color: #dd4b39;}
-a.linkedin-bg:hover {color: #dd4b39;}
-a.icon-github-circled {color: #dd4b39;}
-a.icon-up-bg:hover {color: #dd4b39;}
+a.twitter-bg:hover {color:#5de4fc;}
+a.facebook-bg:hover{color: #5de4fc;}
+a.linkedin-bg:hover {color: #5de4fc;}
+a.icon-github-circled {color: #5de4fc;}
+a.icon-up-bg:hover {color: #5de4fc;}
 
 .copyright {
     margin-bottom: 0;

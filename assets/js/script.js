@@ -25,23 +25,33 @@ $(function() {
         offset: 10
     });
 
-	/* Progress bar */
     var $section = $('.section-skills');
+
     function loadDaBars() {
-	    $('.progress .progress-bar').progressbar({
-	        transition_delay: 500
-	    });
+        $('.progress .progress-bar').each(function() {
+            $(this).css('width', '0%'); 
+            var transitionGoal = $(this).attr('data-transitiongoal');
+            $(this).stop().animate({ width: transitionGoal + "%" }, 1000);
+        });
     }
-    
-    $(document).bind('scroll', function(ev) {
-        var scrollOffset = $(document).scrollTop();
-        var containerOffset = $section.offset().top - window.innerHeight;
-        if (scrollOffset > containerOffset) {
-            loadDaBars();
-            // unbind event not to load scrolsl again
-            $(document).unbind('scroll');
-        }
-    });
+
+    function resetDaBars() {
+        $('.progress .progress-bar').css('width', '0%'); 
+    }
+
+    if ('IntersectionObserver' in window) {
+        let observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    loadDaBars();
+                } else {
+                    resetDaBars(); 
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe($section[0]);
+    }
 
     /* Counters  */
     if ($(".section-counters .start").length>0) {
