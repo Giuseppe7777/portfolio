@@ -582,3 +582,133 @@ a.icon-up-bg:hover {color: #5de4fc;}
     color: #fff;
     text-align: center;
 }
+
+/* JOKE
+======================================================= */
+.joke {
+  position: fixed;
+  z-index: 5;
+  bottom: 0;
+  right: 50px;
+  max-width: 300px; 
+  min-height: 60px; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.joke-bubble {
+  background: #d0e8ff; 
+  padding: 10px 15px;
+  border-radius: 15px;
+  font-size: 14px;
+  position: relative;
+  box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.joke-text {
+  font-weight: bold;
+  margin: 0;
+}
+
+.emoji-container {
+  text-align: center;
+  margin-top: 5px;
+  display: flex;
+}
+
+.emoji-item {
+  opacity: 0; 
+  font-size: 24px;
+  margin: 0 5px;
+  transition: opacity 1s ease-in-out; 
+  display: flex; 
+}
+
+@keyframes laugh {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(10deg); }
+  50% { transform: rotate(-10deg); }
+  75% { transform: rotate(5deg); }
+}
+
+.emoji-item.showme {
+  opacity: 1; 
+  animation: laugh 0.5s infinite alternate; 
+}
+
+.joke-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.joke-close {
+  background: #454545;
+  color: white;
+  font-size: 16px;
+  border: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none; 
+  transition: opacity 0.5s ease-in-out;
+}
+
+.joke-close:hover {
+  background: black;
+}
+
+.joke-refresh {
+  display: block;
+  padding: 8px 12px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 15px;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0; 
+  pointer-events: none; 
+  transition: opacity 0.5s ease-in-out, background 0.3s ease;
+}
+
+.joke-refresh:hover {
+  background: #0056b3;
+}
+
+.joke-refresh.visible,
+.joke-close.visible {
+  opacity: 1; 
+  pointer-events: auto; 
+}
+
+@media (max-width: 767px) {
+  .joke {
+    bottom: 20px;
+    right: 0px;
+    max-width: 200px;
+  }
+
+  .joke-bubble {
+    background: #d0e8ff; 
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 12px;
+  }
+
+  .joke-refresh {
+    border-radius: 10px;
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+}
